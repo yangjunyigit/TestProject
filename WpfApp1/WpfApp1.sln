@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{68C025DB-A7B3-4717-93BD-FFC57EBD4482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconLib", "IconLib\IconLib.csproj", "{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68C025DB-A7B3-4717-93BD-FFC57EBD4482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C025DB-A7B3-4717-93BD-FFC57EBD4482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C025DB-A7B3-4717-93BD-FFC57EBD4482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C025DB-A7B3-4717-93BD-FFC57EBD4482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F312CE0-DC80-42EA-B73D-EFB67987A806}
+	EndGlobalSection
+EndGlobal

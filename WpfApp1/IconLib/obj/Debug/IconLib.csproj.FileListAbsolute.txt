@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\bin\Debug\IconLib.dll
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\bin\Debug\IconLib.pdb
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib_MarkupCompile.cache
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib_MarkupCompile.lref
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\Themes\Generic.baml
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.g.resources
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.Properties.Resources.resources
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.dll
+C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.pdb

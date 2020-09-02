@@ -1,0 +1,8 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:IconLib">
+    <Style x:Key="FontAwesome" >
+        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/IconLib;component/Fonts/fonts/#FontAwesome" />
+    </Style>
+</ResourceDictionary>

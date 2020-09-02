@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+       Width="800" Height="600" Visibility="Visible" ResizeMode="NoResize" SizeToContent="Manual" WindowStyle="None" AllowsTransparency="True" OpacityMask="Black">
+    <!-- Background="#55FFFFFF"-->
+
+    <!--<Grid x:Name="LayoutRoot" OpacityMask="{x:Null}" Background="Transparent" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Grid.RowSpan="1" BorderThickness="0,1,0,0" BorderBrush="White" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,0.5" EndPoint="1,0.5">
+                        <GradientStop Color="#11CCCCCD" Offset="0"></GradientStop>
+                        <GradientStop Color="#112E53ff" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Border BorderThickness="0" Grid.RowSpan="1" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,0.5" EndPoint="0.5,1">
+                        <GradientStop Color="#11B4B4B4" Offset="0"></GradientStop>
+                        <GradientStop Color="#11101Eff" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <ContentControl Grid.Row="1" Margin="2" Background="White"></ContentControl>
+        </Grid>-->
+</Window>

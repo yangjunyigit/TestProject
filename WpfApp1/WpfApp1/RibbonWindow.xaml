@@ -1,0 +1,38 @@
+﻿<telerik:RadRibbonWindow x:Class="WpfApp1.RibbonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="RibbonWindow" Height="450" Width="800">
+    <telerik:RadTabControl>
+        <telerik:RadTabItem Header="Microsoft">
+            <WrapPanel >
+                <telerik:RadTabControl Margin="10,0"></telerik:RadTabControl>
+                <telerik:RadButton Width="100" Content="xxx" Click="Button_Click" Margin="10,0"></telerik:RadButton>
+                <!--<telerik:RadComboBox Width="100">textblock</telerik:RadComboBox>-->
+                <!--<TextBox Width="100" Text="aaaaaa"></TextBox>-->
+                <telerik:RadComboBox Width="100" Margin="10,0">
+                    <ComboBoxItem>1111111</ComboBoxItem>
+                    <ComboBoxItem>1111111</ComboBoxItem>
+                    <ComboBoxItem>1111111</ComboBoxItem>
+                    <ComboBoxItem>1111111</ComboBoxItem>
+                </telerik:RadComboBox>
+
+                <telerik:RadTabControl Margin="10,0">
+                    <telerik:RadTabItem Header="11111"></telerik:RadTabItem>
+                    <telerik:RadTabItem Header="222222"></telerik:RadTabItem>
+                    <telerik:RadTabItem Header="3333333"></telerik:RadTabItem>
+                </telerik:RadTabControl>
+            </WrapPanel>
+        </telerik:RadTabItem>
+        <telerik:RadTabItem Header="Google">
+            <TextBlock Text="Google Content" />
+        </telerik:RadTabItem>
+        <telerik:RadTabItem Header="Progress">
+            <TextBlock Text="Progress Content" />
+        </telerik:RadTabItem>
+    </telerik:RadTabControl>
+</telerik:RadRibbonWindow>

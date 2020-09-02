@@ -1,0 +1,180 @@
+﻿<telerik:RadWindow x:Class="WpfApp1.TelerikWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                   xmlns:telerikCtrl="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+                   xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        MinWidth="800" MinHeight="600"
+        d:DesignHeight="356" d:DesignWidth="486" Header="xxxxxx" 
+                  navigation:RadWindowInteropHelper.ShowInTaskbar="True" x:Name="mainWindow" Style="{StaticResource radWindwoStyle}" ><!--Template="{DynamicResource RadWindowControlTemplate1}"-->
+    <telerik:RadWindow.HeaderTemplate>        
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontWeight="Bold">
+                    <Run Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}"></Run>
+                    [DebugMsg:<Run Text="{Binding DataContext.HeaderMessage,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:TelerikWindow}}}"></Run>]
+                </TextBlock>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<telerik:RadComboBox Margin="0 7" VerticalAlignment="Center" SelectedItem="{Binding DataContext.ThemeName,ElementName=mainWindow ,Mode=TwoWay}"
+						ItemsSource="{Binding DataContext.ThemeNameList ,ElementName=mainWindow}" SelectionChanged="RadComboBox_SelectionChanged"
+                                     Background="Transparent" BorderThickness="0"/>-->
+                    <telerik:RadButton x:Name="ThemeBtn" Click="ThemeBtn_Click" Background="Transparent" BorderThickness="0">
+                        <materialDesign:PackIcon Kind="Cog" />
+                    </telerik:RadButton>
+
+                    <Popup x:Name="themePopup" PlacementTarget="{Binding ElementName=ThemeBtn}" Placement="Bottom" IsOpen="{Binding DataContext.IsPopupOpen,ElementName=mainWindow}" StaysOpen="True">
+                        <telerik:RadListBox MaxHeight="200" SelectedItem="{Binding DataContext.ThemeName,ElementName=mainWindow ,Mode=TwoWay}" 
+                                        ItemsSource="{Binding DataContext.ThemeNameList ,ElementName=mainWindow}" 
+                                        SelectionChanged="RadListBox_SelectionChanged">
+                            
+                            
+                        </telerik:RadListBox>
+                    </Popup>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </telerik:RadWindow.HeaderTemplate>
+    <telerik:RadWindow.Resources>
+        <SolidColorBrush x:Key="ImportantForegroundBrush" Color="#FFD20000" />
+
+        <Storyboard x:Key="ReminderAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border2">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border1">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="border1">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="border1">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="border1">
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="border1">
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ShowDetailsAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="border">
+                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="-120"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </telerik:RadWindow.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <!--<Image Source="../../Images/Window/window_customization.jpg" Width="486" Height="322" VerticalAlignment="Center" HorizontalAlignment="Center" />-->
+
+        <!--<Border x:Name="border" Background="#EDFFFFFF" MinHeight="100" MaxHeight="300" VerticalAlignment="Bottom" Opacity="0" 
+		Margin="10 10 10 -110" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Grid Margin="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="48" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Football Focus" Foreground="{StaticResource ImportantForegroundBrush}"
+						   TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="30"/>
+                <TextBlock Grid.Column="1" Text="17:00" Foreground="{StaticResource ImportantForegroundBrush}"
+						   TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="30" />
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <TextBlock Text="Game of the Day - " TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="16"  />
+                    <TextBlock Text="Saturday, August 6" TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="16"
+							    Foreground="{StaticResource ImportantForegroundBrush}"/>
+                </StackPanel>
+
+                <telerik:RadButton Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="Reminder"
+								   Background="#FFFFF500" Width="76" Click="ReminderButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border x:Name="border2" Background="#B2FFFFFF" Opacity="0" Visibility="Collapsed" />
+        <Border x:Name="border1" Background="#F4FFFFFF" BorderBrush="#FF7A7A7A" BorderThickness="1" 
+				VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 10 10 40"
+				Opacity="0" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.4" ScaleY="0.4"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <TextBlock Text="Reminder was set." FontFamily="Segoe UI Light" FontSize="16"
+					   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8"/>
+        </Border>-->
+        <WrapPanel >
+            <telerik:RadButton Width="100" Content="xxx" Click="Button_Click"></telerik:RadButton>
+            <telerik:RadButton Click="RadButton_Click"></telerik:RadButton>
+            <!--<telerik:RadComboBox Width="100">textblock</telerik:RadComboBox>-->
+            <!--<TextBox Width="100" Text="aaaaaa"></TextBox>-->
+            <telerik:RadComboBox Width="100">
+                <ComboBoxItem>1111111</ComboBoxItem>
+                <ComboBoxItem>1111111</ComboBoxItem>
+                <ComboBoxItem>1111111</ComboBoxItem>
+                <ComboBoxItem>1111111</ComboBoxItem>
+            </telerik:RadComboBox>
+
+            <telerik:RadTabControl>
+                <telerik:RadTabItem Header="11111"></telerik:RadTabItem>
+                <telerik:RadTabItem Header="222222"></telerik:RadTabItem>
+                <telerik:RadTabItem Header="3333333"></telerik:RadTabItem>
+            </telerik:RadTabControl>
+            <Border>
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#ff848484"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <TextBlock Text="&#xf013;" Style="{StaticResource FontAwesome}" FontSize="20"></TextBlock>
+            <!--<telerik:RadListBox ItemsSource="{Binding ThemeNameList}" SelectedItem="{Binding ThemeName,UpdateSourceTrigger=PropertyChanged ,Mode=TwoWay}"></telerik:RadListBox>-->
+        </WrapPanel>
+    </Grid>
+</telerik:RadWindow>
