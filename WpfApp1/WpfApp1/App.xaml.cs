@@ -46,7 +46,8 @@ namespace WpfApp1
             //var window = new Window5();
             //window.Show();
 
-
+            //var window = new Window6();
+            //window.Show();
 
             //App.Current.Resources.FindName("");
             //MaterialDesignThemes.Wpf.ColorZone

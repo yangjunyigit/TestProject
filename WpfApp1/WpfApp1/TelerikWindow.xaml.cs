@@ -1,23 +1,11 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Controls.Data.DataFilter;
-using Telerik.Windows.Controls.RichTextBoxUI.Dialogs;
 
 namespace WpfApp1
 {
@@ -30,7 +18,8 @@ namespace WpfApp1
         public string ThemeName
         {
             get { return (string)GetValue(ThemeNameProperty); }
-            set { 
+            set
+            {
                 SetValue(ThemeNameProperty, value);
             }
         }
@@ -59,7 +48,7 @@ namespace WpfApp1
         public bool IsPopupOpen
         {
             get { return (bool)GetValue(IsPopupOpenProperty); }
-            set { SetValue(IsPopupOpenProperty, value);}
+            set { SetValue(IsPopupOpenProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for IsPopupOpen.  This enables animation, styling, binding, etc...
@@ -131,7 +120,7 @@ namespace WpfApp1
         {
             Configuration cfg = ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.None);
             string setKey = "TestKey";
-            if(cfg.AppSettings.Settings.AllKeys.Contains(setKey))
+            if (cfg.AppSettings.Settings.AllKeys.Contains(setKey))
             {
                 cfg.AppSettings.Settings[setKey].Value = "11111";
             }
@@ -160,13 +149,13 @@ namespace WpfApp1
         }
         private void ChangeTheme(string themeName)
         {
-            if(themeName == "Windows8Touch")
+            if (themeName == "Windows8Touch")
             {
                 return;
             }
             App.Current.Resources.MergedDictionaries.Clear();
 
-            setStyle(this,themeName);
+            setStyle(this, themeName);
 
             return;
 
@@ -228,16 +217,17 @@ namespace WpfApp1
             });
         }
 
-        private void setStyle(DependencyObject depObj,string themeName)
+        private void setStyle(DependencyObject depObj, string themeName)
         {
-            if(depObj is RadButton)
+            if (depObj is RadButton)
             {
 
             }
-            int count = VisualTreeHelper.GetChildrenCount(depObj); 
+            int count = VisualTreeHelper.GetChildrenCount(depObj);
             for (int i = 0; i < count; i++)
             {
                 var dep = VisualTreeHelper.GetChild(depObj, i);
+                //LogicalTreeHelper.get
                 setStyle(dep, themeName);
             }
             StyleManager.SetTheme(depObj, ThemeManager.StandardThemes[themeName]);
@@ -255,19 +245,19 @@ namespace WpfApp1
             App.Current.Resources.MergedDictionaries.Add(new ResourceDictionary
             {
                 Source = new Uri("pack://application:,,,/RedWindowHeaderTemplate.xaml")
-            }) ;
+            });
         }
 
         private void RadButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
         private int n = 0;
         private void RadListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             n++;
             HeaderMessage = n.ToString();
-            ChangeTheme(ThemeName);
+            ChangeTheme(ThemeName);//A1ADB8
         }
     }
 }
