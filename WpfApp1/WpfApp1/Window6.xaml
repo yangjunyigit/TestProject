@@ -1,46 +1,130 @@
-﻿<Window x:Class="WpfApp1.Window6"
+﻿<telerik:RadWindow x:Class="WpfApp1.Window6"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         mc:Ignorable="d"
-        Title="Window6" Height="450" Width="800">
-    <Window.Resources>
-        <ResourceDictionary>
-                <ControlTemplate TargetType="Button" x:Key="btnTemplate">
-                    <Grid >
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
+        xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"                   
+        Header="Window6" Height="450" Width="800" telerik:StyleManager.Theme="Windows7"
+        navigation:RadWindowInteropHelper.ShowInTaskbar="True" x:Name="mainWindow" Style="{StaticResource radWindwoStyle}">
+    <telerik:RadWindow.HeaderTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontWeight="Bold">
+                    <Run Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}"></Run>
+                    [DebugMsg:<Run Text="{Binding DataContext.HeaderMessage,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:Window6}}}"></Run>]
+                </TextBlock>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<telerik:RadComboBox Margin="0 7" VerticalAlignment="Center" SelectedItem="{Binding DataContext.ThemeName,ElementName=mainWindow ,Mode=TwoWay}"
+						ItemsSource="{Binding DataContext.ThemeNameList ,ElementName=mainWindow}" SelectionChanged="RadComboBox_SelectionChanged"
+                                     Background="Transparent" BorderThickness="0"/>-->
+                    <telerik:RadButton x:Name="ThemeBtn" Click="ThemeBtn_Click" Background="Transparent" BorderThickness="0">XX
+                    </telerik:RadButton>
 
-                                <VisualStateGroup.Transitions>
+                    <Popup x:Name="themePopup" PlacementTarget="{Binding ElementName=ThemeBtn}" Placement="Bottom" IsOpen="{Binding DataContext.IsPopupOpen,ElementName=mainWindow}" StaysOpen="False">
+                        <telerik:RadListBox MaxHeight="200" SelectedItem="{Binding DataContext.ThemeName,ElementName=mainWindow ,Mode=TwoWay}" 
+                                        ItemsSource="{Binding DataContext.ThemeNameList ,ElementName=mainWindow}" 
+                                        SelectionChanged="RadListBox_SelectionChanged">
 
-                                    <!--Take one half second to trasition to the MouseOver state.-->
-                                    <VisualTransition To="MouseOver" GeneratedDuration="0:0:0.5"/>
-                                </VisualStateGroup.Transitions>
 
-                                <VisualState x:Name="Normal" />
-
-                                <!--Change the SolidColorBrush, ButtonBrush, to red when the
-            mouse is over the button.-->
-                                <VisualState x:Name="MouseOver">
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="ButtonBrush" Storyboard.TargetProperty="Color" To="Red" />
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <Grid.Background>
-                            <SolidColorBrush x:Name="ButtonBrush" Color="Green"/>
-                        </Grid.Background>
-                    </Grid>
-                </ControlTemplate>
-
-        </ResourceDictionary>        
-    </Window.Resources>
+                        </telerik:RadListBox>
+                    </Popup>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </telerik:RadWindow.HeaderTemplate>
     <Grid>
-        <!--<Border CornerRadius"></Border>-->
-        <Button>
-        </Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition  Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="项目1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"></TextBlock>
+        <TextBlock Text="项目2" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"></TextBlock>
+        <TextBlock Text="项目3" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"></TextBlock>
+        <TextBlock Text="项目4" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"></TextBlock>
+        <TextBlock Text="项目5" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"></TextBlock>
+        <TextBlock Text="" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+        <telerik:RadComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="1">
+            <telerik:RadComboBoxItem>T11111</telerik:RadComboBoxItem>
+            <telerik:RadComboBoxItem>T22222</telerik:RadComboBoxItem>
+            <telerik:RadComboBoxItem>T33333</telerik:RadComboBoxItem>
+            <telerik:RadComboBoxItem>T44444</telerik:RadComboBoxItem>
+            <telerik:RadComboBoxItem>T55555</telerik:RadComboBoxItem>
+        </telerik:RadComboBox>
+        <ComboBox Grid.Row="3" Grid.Column="1" SelectedIndex="1">
+            <ComboBoxItem>11111</ComboBoxItem>
+            <ComboBoxItem>22222</ComboBoxItem>
+            <ComboBoxItem>33333</ComboBoxItem>
+            <ComboBoxItem>44444</ComboBoxItem>
+            <ComboBoxItem>55555</ComboBoxItem>
+        </ComboBox>
+        <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
+        <telerik:RadTabControl Grid.Row="5" Grid.Column="1">
+            <telerik:RadTabItem Header="page1">
+                <Label ></Label>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="page2">
+                <StackPanel >
+                    <ComboBox SelectedIndex="1" ItemsSource="{Binding ComboSource}">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel></VirtualizingStackPanel>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </StackPanel>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="page3">
+                <StackPanel >
+                    <ComboBox SelectedIndex="1" ItemsSource="{Binding ComboSource}">
+                    </ComboBox>
+                </StackPanel>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="page4">
+                <telerik:RadListBox ItemsSource="{Binding ComboSource}">
+                    <telerik:RadListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel></VirtualizingStackPanel>
+                        </ItemsPanelTemplate>
+                    </telerik:RadListBox.ItemsPanel>
+                </telerik:RadListBox>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="page5">
+                <ListBox ItemsSource="{Binding ComboSource}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox></CheckBox>
+                                <Button Height="20">X</Button>
+                                <TextBlock Text="{Binding}" Height="20"></TextBlock>
+                                <Border Background="{Binding}" Width="50" Height="20"></Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </telerik:RadTabItem>
+        </telerik:RadTabControl>
+        <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
+            <Button Margin="10" Click="Button_Click">MS Button</Button>
+            <telerik:RadButton Margin="10" >TelerikButton</telerik:RadButton>
+        </StackPanel>
     </Grid>
-</Window>
+</telerik:RadWindow>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconLib", "IconLib\IconLib.csproj", "{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFTest", "MEFTest\MEFTest.csproj", "{F3027C32-BA5E-42FA-BF36-D00A94B703B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFTest_FW", "MEFTest_FW\MEFTest_FW.csproj", "{625558A0-D4B3-4126-B146-ED28E285C8EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEAD7F55-2ABA-43BA-8982-5A59CEC21E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3027C32-BA5E-42FA-BF36-D00A94B703B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3027C32-BA5E-42FA-BF36-D00A94B703B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3027C32-BA5E-42FA-BF36-D00A94B703B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3027C32-BA5E-42FA-BF36-D00A94B703B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625558A0-D4B3-4126-B146-ED28E285C8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625558A0-D4B3-4126-B146-ED28E285C8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625558A0-D4B3-4126-B146-ED28E285C8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625558A0-D4B3-4126-B146-ED28E285C8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

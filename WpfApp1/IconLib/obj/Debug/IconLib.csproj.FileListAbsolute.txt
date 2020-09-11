@@ -10,3 +10,14 @@ C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.csproj.Gen
 C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.dll
 C:\Users\Administrator\source\repos\WpfApp1\IconLib\obj\Debug\IconLib.pdb
+D:\Code\Github\TestProject\WpfApp1\IconLib\bin\Debug\IconLib.dll
+D:\Code\Github\TestProject\WpfApp1\IconLib\bin\Debug\IconLib.pdb
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib_MarkupCompile.cache
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib_MarkupCompile.lref
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\Themes\Generic.baml
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.g.resources
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.Properties.Resources.resources
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.csproj.GenerateResource.cache
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.csproj.CoreCompileInputs.cache
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.dll
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.pdb

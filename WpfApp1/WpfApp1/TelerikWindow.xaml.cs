@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -6,6 +7,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.ColorPicker;
+using Telerik.Windows.Controls.TreeMap;
 
 namespace WpfApp1
 {
@@ -73,7 +76,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            IEnumerable<Theme> themes = ThemeManager.StandardThemes.Select(a => a.Value);
+            IEnumerable<Telerik.Windows.Controls.Theme> themes = ThemeManager.StandardThemes.Select(a => a.Value);
             //this.close
             //object applicationTheme = ThemeManager.;
             //StyleManager.ApplicationTheme = ThemeManager.StandardThemes.Select(m=>m.Key=="").First();
@@ -100,6 +103,25 @@ namespace WpfApp1
                         "Fluent",
             };
             ThemeName = "Transparent";
+
+
+            //VisualStudio2013Palette.Palette.DefaultForegroundColor = Colors.White;
+
+            //FluentPalette
+
+
+            //Windows8Palette.Palette.MainColor = Colors.Black;
+            //Windows8Palette.Palette.AccentColor = Colors.Orange;
+            //Windows8Palette.Palette.BasicColor = Colors.DarkGray;
+            //Windows8Palette.Palette.StrongColor = Colors.Gray;
+            //Windows8Palette.Palette.MarkerColor = Colors.LightGray;
+            //Windows8Palette.Palette.ValidationColor = Colors.Red;
+            //Windows8TouchPalette.Palette.MainColor = Colors.Black;
+            //Windows8TouchPalette.Palette.AccentColor = Colors.Orange;
+            //Windows8TouchPalette.Palette.ValidationColor = Colors.Red;
+            //Windows8TouchPalette.Palette.EffectHighColor = Colors.Yellow;
+            //Windows8TouchPalette.Palette.EffectLowColor = Colors.Orange;
+
             //this.Header
             //Telerik.Windows.Controls.WindowCommands.Minimize
             //RadRibbonWindow window = new RadRibbonWindow();
@@ -154,17 +176,17 @@ namespace WpfApp1
                 return;
             }
             App.Current.Resources.MergedDictionaries.Clear();
+                        
+            //setStyle(this, themeName);
 
-            setStyle(this, themeName);
-
-            return;
+            //return;
 
             //Telerik.Windows.Controls.IconSources
             //StyleManager.ApplicationTheme = new Windows7Theme();
 
             //var resources = App.Current.Resources.MergedDictionaries;
 
-            App.Current.Resources.MergedDictionaries.Clear();
+            //App.Current.Resources.MergedDictionaries.Clear();
 
             //App.Current.Resources.MergedDictionaries.AddRange(resources);
 
@@ -219,19 +241,28 @@ namespace WpfApp1
 
         private void setStyle(DependencyObject depObj, string themeName)
         {
-            if (depObj is RadButton)
-            {
+            //if (depObj is RadButton)
+            //{
 
-            }
-            int count = VisualTreeHelper.GetChildrenCount(depObj);
-            for (int i = 0; i < count; i++)
+            //}
+            //int count = VisualTreeHelper.GetChildrenCount(depObj);
+            //for (int i = 0; i < count; i++)
+            //{
+            //    var dep = VisualTreeHelper.GetChild(depObj, i);
+            //    //LogicalTreeHelper.get
+            //    setStyle(dep, themeName);
+            //}
+            //StyleManager.SetTheme(depObj, ThemeManager.StandardThemes[themeName]);
+
+            var children = LogicalTreeHelper.GetChildren(depObj);
+            foreach (var item in children)
             {
-                var dep = VisualTreeHelper.GetChild(depObj, i);
-                //LogicalTreeHelper.get
-                setStyle(dep, themeName);
+                if(item is DependencyObject)
+                {
+                    setStyle(item as DependencyObject, themeName);
+                }
             }
             StyleManager.SetTheme(depObj, ThemeManager.StandardThemes[themeName]);
-
         }
 
         private void ResetRootVisual()

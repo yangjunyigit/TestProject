@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Administrator\source\repos\WpfApp1\WpfApp1\obj\Debug\
+D:\Code\Github\TestProject\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\Administrator\source\repos\WpfApp1\WpfApp1\App.xaml
-11178645584
+D:\Code\Github\TestProject\WpfApp1\WpfApp1\App.xaml
+12-19756116
 
-181374467790
-53-576502390
-RedWindowHeaderTemplate.xaml;RibbonWindow.xaml;TelerikWindow.xaml;Test\Window2.xaml;Test\Window3.xaml;Test\Window3Style.xaml;Test\WindowExResource.xaml;MainWindow.xaml;Themes\Generic.xaml;Test\Window1.xaml;Window5.xaml;
+19-1759513700
+531497378484
+RedWindowHeaderTemplate.xaml;RibbonWindow.xaml;Test\Window2.xaml;Test\Window3.xaml;Test\Window3Style.xaml;Test\WindowExResource.xaml;MainWindow.xaml;Themes\Generic.xaml;Test\Window1.xaml;UserControl1.xaml;Window5.xaml;Window6.xaml;
 
 True
 

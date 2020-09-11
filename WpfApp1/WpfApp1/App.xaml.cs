@@ -36,11 +36,11 @@ namespace WpfApp1
 
 
 
-            ThemeManager.StandardThemes.Add("Default", new Themes.DefaultTheme() { });
+            //ThemeManager.StandardThemes.Add("Default", new Themes.DefaultTheme() { });
 
-            Telerik.Windows.Controls.StyleManager.ApplicationTheme = ThemeManager.StandardThemes["Default"];
+            //Telerik.Windows.Controls.StyleManager.ApplicationTheme = ThemeManager.StandardThemes["Default"];
 
-            var window = new TelerikWindow();
+            var window = new Window6();
             window.Show();
 
             //var window = new Window5();

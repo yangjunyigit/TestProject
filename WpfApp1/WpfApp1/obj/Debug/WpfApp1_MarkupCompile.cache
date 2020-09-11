@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Code\Github\TestProject\WpfApp1\WpfApp1\App.xaml
-11178645584
+12-19756116
 
-181374467790
+18-917154333
 531497378484
-RedWindowHeaderTemplate.xaml;RibbonWindow.xaml;TelerikWindow.xaml;Test\Window2.xaml;Test\Window3.xaml;Test\Window3Style.xaml;Test\WindowExResource.xaml;MainWindow.xaml;Themes\Generic.xaml;Test\Window1.xaml;Window5.xaml;
+RedWindowHeaderTemplate.xaml;RibbonWindow.xaml;Test\Window2.xaml;Test\Window3.xaml;Test\Window3Style.xaml;Test\WindowExResource.xaml;MainWindow.xaml;Themes\Generic.xaml;Test\Window1.xaml;UserControl1.xaml;Window5.xaml;Window6.xaml;
 
-True
+False
 

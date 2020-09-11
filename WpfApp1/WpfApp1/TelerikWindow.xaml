@@ -150,30 +150,31 @@
 					   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8"/>
         </Border>-->
         <WrapPanel >
-            <telerik:RadButton Width="100" Content="xxx" Click="Button_Click"></telerik:RadButton>
-            <telerik:RadButton Click="RadButton_Click"></telerik:RadButton>
+            <telerik:RadButton Width="100" Content="xxx" Click="Button_Click" Margin="10"></telerik:RadButton>
+            <telerik:RadButton Click="RadButton_Click" Margin="10">222222</telerik:RadButton>
             <!--<telerik:RadComboBox Width="100">textblock</telerik:RadComboBox>-->
             <!--<TextBox Width="100" Text="aaaaaa"></TextBox>-->
-            <telerik:RadComboBox Width="100">
+            <telerik:RadComboBox Width="100" SelectedIndex="1" Margin="10">
                 <ComboBoxItem>1111111</ComboBoxItem>
                 <ComboBoxItem>1111111</ComboBoxItem>
                 <ComboBoxItem>1111111</ComboBoxItem>
                 <ComboBoxItem>1111111</ComboBoxItem>
             </telerik:RadComboBox>
 
-            <telerik:RadTabControl>
+            <telerik:RadTabControl Margin="10">
                 <telerik:RadTabItem Header="11111"></telerik:RadTabItem>
                 <telerik:RadTabItem Header="222222"></telerik:RadTabItem>
-                <telerik:RadTabItem Header="3333333"></telerik:RadTabItem>
+                <telerik:RadTabItem Header="3333333">
+                    <local:UserControl1></local:UserControl1>
+                </telerik:RadTabItem>
             </telerik:RadTabControl>
             <Border>
                 <Border.Background>
                     <LinearGradientBrush>
-                        <GradientStop Color="#ff848484"></GradientStop>
+                        <GradientStop Color="#FFD6E7FF"></GradientStop>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <TextBlock Text="&#xf013;" Style="{StaticResource FontAwesome}" FontSize="20"></TextBlock>
             <!--<telerik:RadListBox ItemsSource="{Binding ThemeNameList}" SelectedItem="{Binding ThemeName,UpdateSourceTrigger=PropertyChanged ,Mode=TwoWay}"></telerik:RadListBox>-->
         </WrapPanel>
     </Grid>
