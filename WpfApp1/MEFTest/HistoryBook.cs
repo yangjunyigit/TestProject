@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MEFTest
 {
-    [Export(typeof(IBook))]
+    [Export("HistoryBook",typeof(IBook))]
     public class HistoryBook : IBook
     {
         public string GetTitle()

@@ -5,7 +5,9 @@ using System.Text;
 
 namespace MEFTest
 {
-    [Export(typeof(IBook))]
+    [Export("MathBook",typeof(IBook))]
+    [ExportMetadata("aaa","")]
+    [ExportMetadata("bbb", "")]
     public class MathBook : IBook
     {
         public string GetTitle()

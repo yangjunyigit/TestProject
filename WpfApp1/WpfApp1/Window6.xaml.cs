@@ -158,9 +158,7 @@ namespace WpfApp1
             //Office2016Palette.Palette.
             //Windows8Palette.Palette.Freeze();
 
-            Telerik.Windows.Controls.OfficeColorPalette tp;
-
-            //App.Current.Resources.MergedDictionaries.
+            //Telerik.Windows.Controls.OfficeColorPalette tp;
 
             //Telerik.Windows.Controls.OfficeColorPalette
         }
@@ -188,8 +186,6 @@ namespace WpfApp1
             //StyleManager.SetTheme(depObj, ThemeManager.StandardThemes[themeName]);
 
             //Telerik.Windows.Controls.mater
-
-            MaterialDesignColors.Hue h;
 
             var children = LogicalTreeHelper.GetChildren(depObj);
             foreach (var item in children)
@@ -222,8 +218,29 @@ namespace WpfApp1
             //{
             //    ComboSource.Add(item.ToString());
             //}
-            
+
             //Message = MEFTest.Test.Get();
+            Message = MEFTest_FW.Class1.Get();
         }
     }
 }
+
+
+//System.Windows.Markup.XamlParseException
+//  HResult = 0x80131501
+//  Message=“无法从文本“telerikDialogs:ChangeEditingPermissionsDialog”创建“TargetType”。”，行号为“9343”，行位置为“12”。
+//  Source = PresentationFramework
+//  StackTrace:
+//在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+//   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+//   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+//   在 System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+//   在 WpfApp1.App.InitializeComponent() 在 D:\Code\Github\TestProject\WpfApp1\WpfApp1\App.xaml 中: 第 1 行
+//   在 WpfApp1.App.Main()
+
+//  此异常最初是在此调用堆栈中引发的:
+//[外部代码]
+
+//内部异常 1:
+//XamlParseException: 类型引用无法找到名为“{ clr -namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI }
+//ChangeEditingPermissionsDialog”的类型。

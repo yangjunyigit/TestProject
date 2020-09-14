@@ -22,10 +22,10 @@
 
                 <!--<ResourceDictionary Source="Themes/Generic.xaml"></ResourceDictionary>-->
 
-                <ResourceDictionary Source = "/Telerik.Windows.Themes.Transparent;component/Themes/Telerik.Windows.Controls.RichTextBoxUI.xaml" />
+                <!--<ResourceDictionary Source = "/Telerik.Windows.Themes.Transparent;component/Themes/Telerik.Windows.Controls.RichTextBoxUI.xaml" />-->
 
                 <ResourceDictionary Source="pack://application:,,,/IconLib;component/skin/style.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WpfApp1;component/RedWindowHeaderTemplate.xaml"></ResourceDictionary>
+                <!--<ResourceDictionary Source="pack://application:,,,/WpfApp1;component/RedWindowHeaderTemplate.xaml"></ResourceDictionary>-->
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

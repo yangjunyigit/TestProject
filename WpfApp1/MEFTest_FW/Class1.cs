@@ -10,12 +10,14 @@ namespace MEFTest_FW
 {
     public class Class1
     {
-        public void Get()
+        public static string Get()
         {
             AssemblyCatalog ac = new AssemblyCatalog(Assembly.GetExecutingAssembly());
 
-            DirectoryCatalog dc = new DirectoryCatalog("");
+            //DirectoryCatalog dc = new DirectoryCatalog("");
             CompositionContainer cc = new CompositionContainer(ac);
+            Lazy<IBook> lBook = cc.GetExport<IBook>();
+            return lBook.Value.GetTitle();
         }
     }
 }

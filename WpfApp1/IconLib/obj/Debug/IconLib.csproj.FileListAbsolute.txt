@@ -21,3 +21,4 @@ D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.csproj.GenerateReso
 D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.csproj.CoreCompileInputs.cache
 D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.dll
 D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.pdb
+D:\Code\Github\TestProject\WpfApp1\IconLib\obj\Debug\IconLib.csprojAssemblyReference.cache

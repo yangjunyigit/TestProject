@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"                   
         Header="Window6" Height="450" Width="800" telerik:StyleManager.Theme="Windows7"
-        navigation:RadWindowInteropHelper.ShowInTaskbar="True" x:Name="mainWindow" Style="{StaticResource radWindwoStyle}">
+        navigation:RadWindowInteropHelper.ShowInTaskbar="True" x:Name="mainWindow" >
     <telerik:RadWindow.HeaderTemplate>
         <DataTemplate>
             <Grid>
@@ -78,8 +78,7 @@
         </ComboBox>
         <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
         <telerik:RadTabControl Grid.Row="5" Grid.Column="1">
-            <telerik:RadTabItem Header="page1">
-                <Label ></Label>
+            <telerik:RadTabItem Header="page1" Content="{Binding Message}">
             </telerik:RadTabItem>
             <telerik:RadTabItem Header="page2">
                 <StackPanel >
