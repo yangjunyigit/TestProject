@@ -16,7 +16,7 @@ namespace MEFTest_FW
 
             //DirectoryCatalog dc = new DirectoryCatalog("");
             CompositionContainer cc = new CompositionContainer(ac);
-            Lazy<IBook> lBook = cc.GetExport<IBook>();
+            Lazy<IBook> lBook = cc.GetExport<IBook>(); //cc.GetExport<MathBook>();
             return lBook.Value.GetTitle();
         }
     }
